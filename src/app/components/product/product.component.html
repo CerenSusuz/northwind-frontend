@@ -1,0 +1,23 @@
+<div *ngIf="dataLoaded==false" class="spinner-border m-5" role="status">
+</div>
+
+<table *ngIF="dataLoaded==true" class="table">
+    <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">productName</th>
+          <th scope="col">categoryId</th>
+          <th scope="col">unitsInStock</th>
+          <th scope="col">unitPrice</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let product of products">
+              <td>{{product.productID}}</td>
+              <td>{{product.productName}}</td>
+              <td>{{product.categoryID}}</td>
+              <td>{{product.unitPrice}}</td>
+              <td>{{product.unitsInStock}}</td>
+           </tr>
+      </tbody>
+</table>
