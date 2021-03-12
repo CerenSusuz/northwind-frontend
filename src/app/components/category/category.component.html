@@ -1,7 +1,18 @@
-<ul class="list-group list-group-flush">
-    <li class="list-group-item">An item</li>
-    <li class="list-group-item">A second item</li>
-    <li class="list-group-item">A third item</li>
-    <li class="list-group-item">A fourth item</li>
-    <li class="list-group-item">And a fifth one</li>
-  </ul>
+<div *ngIf="dataLoaded==false" class="spinner-border m-5" role="status">
+</div>
+
+<table *ngIF="dataLoaded==true" class="table">
+    <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">categoryId</th>
+          <th scope="col">categoryName</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let category of categories">
+              <td>{{category.categoryId}}</td>
+              <td>{{category.categoryName}}</td>
+           </tr>
+      </tbody>
+</table>
