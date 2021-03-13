@@ -1,7 +1,7 @@
 <div *ngIf="dataLoaded==false" class="spinner-border m-5" role="status">
 </div>
 
-<table *ngIF="dataLoaded==true" class="table">
+<table *ngIf="dataLoaded==true" class="table">
     <thead>
         <tr>
           <th scope="col">#</th>
@@ -16,8 +16,8 @@
               <td>{{product.productID}}</td>
               <td>{{product.productName}}</td>
               <td>{{product.categoryID}}</td>
-              <td>{{product.unitPrice}}</td>
               <td>{{product.unitsInStock}}</td>
+              <td>{{product.unitPrice}}</td>        
            </tr>
       </tbody>
 </table>

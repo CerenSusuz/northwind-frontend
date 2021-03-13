@@ -1,18 +1,20 @@
 import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
-import { CategoryResponseModel } from '../models/categoryResponseModel';
 import { Observable } from 'rxjs';
+import { ListResponseModel } from '../models/listResponseModel';
+import { Category } from '../models/category';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CategoryService {
-  apiUrl = "https://localhost:44383/api/categories/getall";
+  apiUrl = environment.apiURL + "categories/getall";
 
   constructor(private httpClient:HttpClient) { }
 
-  getCategories():Observable<CategoryResponseModel>{
+  getCategories():Observable<ListResponseModel<Category>>{
     return this.httpClient
-    .get<CategoryResponseModel>(this.apiUrl);
+    .get<ListResponseModel<Category>>(this.apiUrl);
   }
 }

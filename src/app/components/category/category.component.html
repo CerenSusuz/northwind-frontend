@@ -1,18 +1,14 @@
 <div *ngIf="dataLoaded==false" class="spinner-border m-5" role="status">
 </div>
 
-<table *ngIF="dataLoaded==true" class="table">
-    <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">categoryId</th>
-          <th scope="col">categoryName</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr *ngFor="let category of categories">
-              <td>{{category.categoryId}}</td>
-              <td>{{category.categoryName}}</td>
-           </tr>
-      </tbody>
-</table>
+<ul *ngIf="dataLoaded==true" class="list-group">
+  <li routerLink = "/products"
+  [class]="getAllCategoryClass()">
+  All Products</li>
+  <li class="list-group-item disabled" aria-disabled="true">Categories</li>
+  <li (click)="setCurrentCategory(category)" 
+  routerLink = "/products/category/{{category.categoryID}}"
+  *ngFor="let category of categories" 
+  [class]="getCurrentCategoryClass(category)">
+  {{category.categoryName}}</li>
+</ul>

@@ -1,13 +1,12 @@
 <div class="container">
-    <app-nav></app-nav>
-    <div class="row">
-        <div class="col-md-4">       
-        <app-category></app-category>
-        </div>
-        <div class="col-md-8">
-        <app-product></app-product>
+  <app-nav></app-nav>
+  <div class="row">
+    <div class="col-md-4">
+      <app-category></app-category>
     </div>
+    <div class="col-md-8">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <app-footer></app-footer>
 </div>
-<router-outlet></router-outlet>
-</div>
-
