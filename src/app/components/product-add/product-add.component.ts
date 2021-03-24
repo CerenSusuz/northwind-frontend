@@ -36,8 +36,11 @@ export class ProductAddComponent implements OnInit {
         console.log(response);
         this.toastr.success(response.message,"Succesfully!");
       },responseError=>{
-        console.log(responseError)
-        // this.toastr.error(responseError.error);
+        if(responseError.error.ValidationErrors.length>0){
+          for (let i = 0; i < responseError.error.ValidationErrors.length ; i++) {
+            this.toastr.error(responseError.error.ValidationErrors[i].ErrorMessage);
+          }
+        }
       })
 
     }else{
