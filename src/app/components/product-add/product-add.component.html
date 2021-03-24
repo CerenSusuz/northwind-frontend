@@ -1,0 +1,55 @@
+<div class="content">
+    <div class="col-md-12">
+        <div class="card">
+
+            <div class="card-header">
+                <h5 class="title">Add Product</h5>
+            </div>
+
+            <div class="card-body">
+                <form [formGroup]="productAddForm">
+                    <label for="productName">product Name</label>
+                    <div class="form-group m-2">
+                        <input type="text" 
+                        id="productName" 
+                        formControlName="productName" 
+                        class="form-control"
+                        placeholder="productName"/>
+                    </div>
+                    <label for="categoryId">category Id</label>
+                    <div class="form-group m-2">
+                        <input type="number" 
+                        id="categoryId" 
+                        formControlName="categoryId" 
+                        class="form-control"
+                        placeholder="categoryId"/>
+                    </div>
+                    <label for="unitPrice">unit Price</label>
+                    <div class="form-group m-2">
+                        <input type="number" 
+                        id="unitPrice" 
+                        formControlName="unitPrice" 
+                        class="form-control"
+                        placeholder="unitPrice"/>
+                    </div>
+                    <label for="unitInStock">unit In Stock</label>
+                    <div class="form-group m-2">
+                        <input type="number" 
+                        id="unitInStock" 
+                        formControlName="unitInStock" 
+                        class="form-control"
+                        placeholder="unitInStock"/>
+                    </div>
+                </form>               
+            </div>
+
+            <div class="card-footer">
+                <button class="btn btn-outline-info" 
+                 type="button"
+                 (click)="add()">
+                    Add
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
