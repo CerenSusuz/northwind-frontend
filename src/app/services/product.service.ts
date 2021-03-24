@@ -26,6 +26,8 @@ export class ProductService {
     .get<ListResponseModel<Product>>(newPath);
   }
 
+
+  
   add(product:Product):Observable<ResponseModel>{
     return this.httpClient.post<ResponseModel>(this.apiUrl+'products/add',product);
   }
