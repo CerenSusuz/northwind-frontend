@@ -2,7 +2,7 @@
 
 <img src="images/login.png" alt="Logo" width="550" height="300">
 
-<img src="images/VisualStudioCode.png" alt="Logo" width="550" height="300">
+<img src="images/VisualStudioCodeLogo.png" alt="Logo" width="80" height="80">
 
 
 # Northwind
