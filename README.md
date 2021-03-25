@@ -1,3 +1,7 @@
+<img src="images/homepage.png" alt="Logo" width="550" height="300">
+
+<img src="images/login.png" alt="Logo" width="550" height="300">
+
 # Northwind
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.3.
