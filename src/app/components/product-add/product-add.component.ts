@@ -33,8 +33,7 @@ export class ProductAddComponent implements OnInit {
     if(this.productAddForm.valid){
       let productModel = Object.assign({},this.productAddForm.value);
       this.productService.add(productModel).subscribe(response=>{
-        console.log(response);
-        this.toastr.success(response.message,"Succesfully!");
+        this.toastr.success(response.message,"Product Succesfully!");
       },responseError=>{
         if(responseError.error.ValidationErrors.length>0){
           for (let i = 0; i < responseError.error.ValidationErrors.length ; i++) {
@@ -44,7 +43,7 @@ export class ProductAddComponent implements OnInit {
       })
 
     }else{
-      this.toastr.error("Error","Warning!");
+      this.toastr.error("Product Error");
     }
   }
 
